@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+body {
+  background-image: url('https://image.freepik.com/free-vector/blue-red-gradient-background_53876-93822.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+   <center><h1 style="color: aqua;">LOGIN FORM</h1></center> 
+    <form method="POST">
+        {% csrf_token %}
+       <center>{{ form }}</center> 
+        <br>
+        <center>
+        <input type="submit" />
+        <button><a href="{% url 'signup'%}">Register</a></button>
+    </center>
+    </form>
+</body>
+
+</html>

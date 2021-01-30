@@ -1,0 +1,91 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculations</title>
+<style>
+div{
+text-align:center;
+background-color: #e30742;
+padding: 75px;
+margin:100px 570px;
+border-radius: 55px;
+height:400px;
+width:200px;
+}
+body {
+  background-image: url('https://image.freepik.com/free-vector/blue-red-gradient-background_53876-93822.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<script>
+function add()
+{
+num1=document.getElementById("firstnumber").value;
+num2=document.getElementById("secondnumber").value;
+var x=+num1 + +num2;
+document.getElementById("result").innerHTML=x;
+}
+function sub()
+{
+num1=document.getElementById("firstnumber").value;
+num2=document.getElementById("secondnumber").value;
+document.getElementById("result").innerHTML=num1-num2;
+}
+function mul()
+{
+num1=document.getElementById("firstnumber").value;
+num2=document.getElementById("secondnumber").value;
+document.getElementById("result").innerHTML=num1*num2;
+}
+function div()
+{
+num1=document.getElementById("firstnumber").value;
+num2=document.getElementById("secondnumber").value;
+document.getElementById("result").innerHTML=num1/num2;
+}
+function divfloor()
+{
+num1=document.getElementById("firstnumber").value;
+num2=document.getElementById("secondnumber").value;
+document.getElementById("result").innerHTML=num1//num2;
+}
+function mod()
+{
+num1=document.getElementById("firstnumber").value;
+num2=document.getElementById("secondnumber").value;
+var x=+num1 + +num2;
+document.getElementById("result").innerHTML=num1%num2;
+}
+function pow()
+{
+num1=document.getElementById("firstnumber").value;
+num2=document.getElementById("secondnumber").value;
+document.getElementById("result").innerHTML=num1**num2;
+}
+</script>
+</head>
+<body>
+<div>
+<form>
+<label> Enter First Number: </label>
+<input type="number" placeholder="enter first number" id="firstnumber"><br><br>
+<label>Enter Second Number: </label>
+<input type="number" placeholder="enter second number" id="secondnumber"><br><br>
+<input type="button" value="ADD+" onClick="add()">
+<input type="button" value="SUB-" onClick="sub()">
+<input type="button" value="MUL*" onClick="mul()"><br><br>
+<input type="button" value="DIV/" onClick="div()">
+<input type="button" value="DIV FLOOR//" onClick="divfloor()"><br><br>
+<input type="button" value="MOD%" onClick="mod()">
+<input type="button" value="POW**" onClick="pow()"><br><br>
+<button><a href="{% url 'logout'%}">logout</a></button>
+</form>
+<p> Result: <br>
+<span id="result"></span>
+</p>
+</div>
+</body>
+</html>
